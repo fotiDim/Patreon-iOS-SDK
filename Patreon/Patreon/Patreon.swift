@@ -11,10 +11,21 @@ import UIKit
 let baseURL = URL(string: "https://www.patreon.com/api/oauth2/api")
 
 public class Patreon: NSObject {
-    public func profile(completion: ((Result<Profile>) -> Void)?) {
+    
+    public func profile(accessToken: String? = nil, completion: ((Result<Profile>) -> Void)?) {
         let url = baseURL?.appendingPathComponent("current_user")
         var request = URLRequest(url: url!)
-        request.setValue("", forHTTPHeaderField: "Authorization")
+        
+        if accessToken == nil {
+            if let data = KeyChain.load(key: "AccessToken"),
+                let result = String(data: data, encoding: String.Encoding.utf8){
+                request.setValue("Bearer " + result, forHTTPHeaderField: "Authorization")
+            }
+        }
+        else {
+            request.setValue(accessToken, forHTTPHeaderField: "Authorization")
+            
+        }
         
         let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
             DispatchQueue.main.async {
@@ -49,4 +60,3 @@ public class Patreon: NSObject {
         task.resume()
     }
 }
-

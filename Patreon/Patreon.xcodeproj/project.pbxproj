@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF90DA08205C734F00713207 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF90DA07205C734F00713207 /* Keychain.swift */; };
 		AFA54D0620501D2F0032BEA9 /* Patreon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA54CFC20501D2F0032BEA9 /* Patreon.framework */; };
 		AFA54D0B20501D2F0032BEA9 /* PatreonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA54D0A20501D2F0032BEA9 /* PatreonTests.swift */; };
 		AFA54D0D20501D2F0032BEA9 /* Patreon.h in Headers */ = {isa = PBXBuildFile; fileRef = AFA54CFF20501D2F0032BEA9 /* Patreon.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF90DA07205C734F00713207 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		AFA54CFC20501D2F0032BEA9 /* Patreon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Patreon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA54CFF20501D2F0032BEA9 /* Patreon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Patreon.h; sourceTree = "<group>"; };
 		AFA54D0020501D2F0032BEA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,10 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				AFD76A73205B122A0012E547 /* Model */,
-				AFA54CFF20501D2F0032BEA9 /* Patreon.h */,
-				AFA54D0020501D2F0032BEA9 /* Info.plist */,
 				AFA54D1F20501D5D0032BEA9 /* Patreon.swift */,
 				AFD76A71205B01B70012E547 /* Result.swift */,
+				AF90DA07205C734F00713207 /* Keychain.swift */,
+				AFA54CFF20501D2F0032BEA9 /* Patreon.h */,
+				AFA54D0020501D2F0032BEA9 /* Info.plist */,
 			);
 			path = Patreon;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFD76A72205B01B70012E547 /* Result.swift in Sources */,
+				AF90DA08205C734F00713207 /* Keychain.swift in Sources */,
 				AFA54D2020501D5D0032BEA9 /* Patreon.swift in Sources */,
 				AFD76A8D205B149A0012E547 /* Profile.swift in Sources */,
 			);

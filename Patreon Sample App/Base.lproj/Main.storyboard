@@ -18,21 +18,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0K-R6-ah1" userLabel="Get profile">
-                                <rect key="frame" x="151" y="318" width="72" height="30"/>
-                                <state key="normal" title="Get profile"/>
-                                <connections>
-                                    <action selector="getProfile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JNa-DJ-3bB"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yYf-LJ-aS0">
+                                <rect key="frame" x="121.5" y="288.5" width="132" height="90"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Access Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Anp-YX-7vA">
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHX-em-4hO">
+                                        <rect key="frame" x="0.0" y="30" width="132" height="30"/>
+                                        <state key="normal" title="Save Access Token"/>
+                                        <connections>
+                                            <action selector="saveAccessToken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yi1-pC-3dJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0K-R6-ah1" userLabel="Get profile">
+                                        <rect key="frame" x="0.0" y="60" width="132" height="30"/>
+                                        <state key="normal" title="Get profile"/>
+                                        <connections>
+                                            <action selector="getProfile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JNa-DJ-3bB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="e0K-R6-ah1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zsw-oc-hZL"/>
-                            <constraint firstItem="e0K-R6-ah1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dPq-mB-iKG"/>
+                            <constraint firstItem="yYf-LJ-aS0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WTe-bu-yEO"/>
+                            <constraint firstItem="yYf-LJ-aS0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zXy-iM-cNf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="accesTokenTextField" destination="Anp-YX-7vA" id="V1m-hi-Ns1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
