@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		AF90DA08205C734F00713207 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF90DA07205C734F00713207 /* Keychain.swift */; };
+		AF90DA0F205C8EA600713207 /* Campaigns.json in Resources */ = {isa = PBXBuildFile; fileRef = AF90DA0E205C8EA600713207 /* Campaigns.json */; };
+		AF90DA1B205D611F00713207 /* Pledges.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF90DA1A205D611F00713207 /* Pledges.swift */; };
+		AF90DA1D205D615B00713207 /* Pledges.json in Resources */ = {isa = PBXBuildFile; fileRef = AF90DA1C205D615B00713207 /* Pledges.json */; };
+		AF90DA1E205D6FC400713207 /* Campaigns.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF90DA18205D608E00713207 /* Campaigns.swift */; };
 		AFA54D0620501D2F0032BEA9 /* Patreon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA54CFC20501D2F0032BEA9 /* Patreon.framework */; };
 		AFA54D0B20501D2F0032BEA9 /* PatreonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA54D0A20501D2F0032BEA9 /* PatreonTests.swift */; };
 		AFA54D0D20501D2F0032BEA9 /* Patreon.h in Headers */ = {isa = PBXBuildFile; fileRef = AFA54CFF20501D2F0032BEA9 /* Patreon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AFA54D2020501D5D0032BEA9 /* Patreon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA54D1F20501D5D0032BEA9 /* Patreon.swift */; };
 		AFD76A72205B01B70012E547 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD76A71205B01B70012E547 /* Result.swift */; };
 		AFD76A8D205B149A0012E547 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD76A7F205B12880012E547 /* Profile.swift */; };
-		AFD76A8F205B161B0012E547 /* profile.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD76A8E205B161B0012E547 /* profile.json */; };
+		AFD76A8F205B161B0012E547 /* Profile.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD76A8E205B161B0012E547 /* Profile.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 
 /* Begin PBXFileReference section */
 		AF90DA07205C734F00713207 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		AF90DA0E205C8EA600713207 /* Campaigns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Campaigns.json; path = Jsons/Campaigns.json; sourceTree = "<group>"; };
+		AF90DA18205D608E00713207 /* Campaigns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaigns.swift; sourceTree = "<group>"; };
+		AF90DA1A205D611F00713207 /* Pledges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pledges.swift; sourceTree = "<group>"; };
+		AF90DA1C205D615B00713207 /* Pledges.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Pledges.json; path = Jsons/Pledges.json; sourceTree = "<group>"; };
 		AFA54CFC20501D2F0032BEA9 /* Patreon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Patreon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA54CFF20501D2F0032BEA9 /* Patreon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Patreon.h; sourceTree = "<group>"; };
 		AFA54D0020501D2F0032BEA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,7 +46,7 @@
 		AFA54D1F20501D5D0032BEA9 /* Patreon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patreon.swift; sourceTree = "<group>"; };
 		AFD76A71205B01B70012E547 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		AFD76A7F205B12880012E547 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		AFD76A8E205B161B0012E547 /* profile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = profile.json; path = Jsons/profile.json; sourceTree = "<group>"; };
+		AFD76A8E205B161B0012E547 /* Profile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Profile.json; path = Jsons/Profile.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +111,12 @@
 		AFD76A73205B122A0012E547 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AFD76A8E205B161B0012E547 /* Profile.json */,
+				AF90DA0E205C8EA600713207 /* Campaigns.json */,
+				AF90DA1C205D615B00713207 /* Pledges.json */,
 				AFD76A7F205B12880012E547 /* Profile.swift */,
-				AFD76A8E205B161B0012E547 /* profile.json */,
+				AF90DA18205D608E00713207 /* Campaigns.swift */,
+				AF90DA1A205D611F00713207 /* Pledges.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,7 +215,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFD76A8F205B161B0012E547 /* profile.json in Resources */,
+				AFD76A8F205B161B0012E547 /* Profile.json in Resources */,
+				AF90DA0F205C8EA600713207 /* Campaigns.json in Resources */,
+				AF90DA1D205D615B00713207 /* Pledges.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +237,8 @@
 			files = (
 				AFD76A72205B01B70012E547 /* Result.swift in Sources */,
 				AF90DA08205C734F00713207 /* Keychain.swift in Sources */,
+				AF90DA1B205D611F00713207 /* Pledges.swift in Sources */,
+				AF90DA1E205D6FC400713207 /* Campaigns.swift in Sources */,
 				AFA54D2020501D5D0032BEA9 /* Patreon.swift in Sources */,
 				AFD76A8D205B149A0012E547 /* Profile.swift in Sources */,
 			);

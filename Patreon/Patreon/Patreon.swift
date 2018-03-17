@@ -1,6 +1,6 @@
 //
 //  Authenticate.swift
-//  PatreonSDK
+//  Patreon
 //
 //  Created by Foti Dim on 07.03.18.
 //  Copyright © 2018 FotiDim. All rights reserved.

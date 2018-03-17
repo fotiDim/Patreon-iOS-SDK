@@ -1,13 +1,13 @@
 //
-//  PatreonSDKTests.swift
-//  PatreonSDKTests
+//  PatreonTests.swift
+//  PatreonTests
 //
 //  Created by Foti Dim on 07.03.18.
 //  Copyright © 2018 FotiDim. All rights reserved.
 //
 
 import XCTest
-@testable import PatreonSDK
+@testable import Patreon
 
 class PatreonTests: XCTestCase {
     

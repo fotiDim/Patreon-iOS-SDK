@@ -18,6 +18,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if let url = Bundle.main.url(forResource:"Configuration", withExtension: "plist") {
+            do {
+                let data = try Data(contentsOf:url)
+                let configuration = try PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [String:Any]
+                if let accessToken = configuration["AccessToken"] as? String {
+                    saveAccessToken(accessToken)
+                }
+            } catch {
+                print(error)
+            }
+        }
+
         if let data = KeyChain.load(key: "AccessToken"),
             let result = String(data: data, encoding: String.Encoding.utf8){
                 print("result: " + result)
@@ -31,7 +44,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveAccessToken(_ sender: Any) {
-        guard let data = accesTokenTextField.text?.data(using: .utf8) else {
+        if let accessToken = accesTokenTextField.text, !accessToken.isEmpty {
+            saveAccessToken(accessToken)
+        }
+    }
+    
+    func saveAccessToken(_ accesssToken: String) {
+        guard let data = accesssToken.data(using: .utf8) else {
             return
         }
         let status = KeyChain.save(key: "AccessToken", data: data)

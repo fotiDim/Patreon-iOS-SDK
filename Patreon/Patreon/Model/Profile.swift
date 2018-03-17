@@ -1,12 +1,20 @@
+//
+//  Profile.swift
+//  Patreon
+//
+//  Created by Foti Dim on 17.03.18.
+//  Copyright © 2018 FotiDim. All rights reserved.
+//
+
 public struct Profile: Codable {
     struct Data: Codable {
         struct Attributes: Codable {
             let about: String?
             let created: String
-            let discordId: Int?
+            let discordId: String?
             let email: String
             let facebook: String?
-            let facebookId: Int?
+            let facebookId: String?
             let firstName: String
             let fullName: String
             let gender: Int
@@ -61,13 +69,10 @@ public struct Profile: Codable {
         }
         let attributes: Attributes
         let id: String
-//        struct Relationships: Codable {
-//            struct Pledges: Codable {
-//                let data: [Any]
-//            }
-//            let pledges: Pledges
-//        }
-//        let relationships: Relationships
+        struct Relationships: Codable {
+            let pledges: Pledges
+        }
+        let relationships: Relationships
         let type: String
     }
     let data: Data
@@ -76,4 +81,3 @@ public struct Profile: Codable {
     }
     let links: Links
 }
-
