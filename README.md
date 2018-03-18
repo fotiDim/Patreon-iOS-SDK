@@ -14,7 +14,7 @@ The SDK is light and self contained without requiring any external dependencies.
 ## Authentication
 So far the SDK does not handle authentication. You are responsible of authenticating the user and obtaining the Access Token. There are 2 strategies for that:
 * Use the **Creator's Access Token**. Make sure you don't bundle it with the app as this is a security risk. The best way it to use on-demand resources to download it after installing the app and then directly write it to the keychain. The SDK will automatically check in the keychain for the key named "AccessToken" before making each request and use it if it's there.
-* Use OAuth2 authentication within the app. However this is not so straitforward as it requires a server component to complete the authentication process securely. For now this is not supported. You will have to figure it out on your own.
+* Use **OAuth2 authentication** within the app. However this is not so straitforward as it requires a server component to complete the authentication process securely. For now this is not supported. You will have to figure it out on your own.
 
 ## API Resources
 The SDK can access 3 different resources from the API
