@@ -10,8 +10,8 @@ public struct Pledges: Codable {
     struct Data: Codable {
         struct Attributes: Codable {
             let amountCents: Int
-            let createdAt: String
-            let declinedSince: String?
+            let createdAt: Date
+            let declinedSince: Date?
             let patronPaysFees: Bool
             let pledgeCapCents: Int?
             private enum CodingKeys: String, CodingKey {
@@ -48,7 +48,7 @@ public struct Pledges: Codable {
                 }
                 let links: Links
             }
-            let reward: Reward
+            let reward: Reward?
         }
         let relationships: Relationships
         let type: String
@@ -63,7 +63,7 @@ public struct Pledges: Codable {
             let firstName: String?
             let fullName: String?
             let gender: Int?
-            let imageUrl: String?
+            let imageUrl: URL?
             let isEmailVerified: Bool?
             let lastName: String?
             struct SocialConnections: Codable {
@@ -76,16 +76,16 @@ public struct Pledges: Codable {
                 let youtube: String?
             }
             let socialConnections: SocialConnections?
-            let thumbUrl: String?
+            let thumbUrl: URL?
             let twitch: String?
             let twitter: String?
-            let url: String
+            let url: URL?
             let vanity: String?
             let youtube: String?
             let amountCents: Int?
             let createdAt: Date?
             let description: String?
-            let discordRoleIds: [Int]
+            let discordRoleIds: [Int]?
             let editedAt: Date?
             let patronCount: Int?
             let postCount: Int?
@@ -137,7 +137,7 @@ public struct Pledges: Codable {
     let included: [Included]
     struct Links: Codable {
         let first: URL
-        let next: URL
+        let next: URL?
     }
     let links: Links
     struct Meta: Codable {
@@ -145,4 +145,3 @@ public struct Pledges: Codable {
     }
     let meta: Meta
 }
-

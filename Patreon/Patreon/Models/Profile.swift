@@ -13,7 +13,7 @@ public struct Profile: Codable {
             let created: String
             let discordId: String?
             let email: String
-            let facebook: String?
+            let facebook: URL?
             let facebookId: String?
             let firstName: String
             let fullName: String
@@ -70,6 +70,9 @@ public struct Profile: Codable {
         let attributes: Attributes
         let id: String
         struct Relationships: Codable {
+            struct Pledges: Codable {
+                let data: [Pledges]
+            }
             let pledges: Pledges
         }
         let relationships: Relationships
@@ -81,3 +84,4 @@ public struct Profile: Codable {
     }
     let links: Links
 }
+

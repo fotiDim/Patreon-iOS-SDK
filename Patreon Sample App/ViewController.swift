@@ -12,8 +12,10 @@ import Patreon
 class ViewController: UIViewController {
     
     let patreon = Patreon()
-
+    
     @IBOutlet weak var accesTokenTextField: UITextField!
+    @IBOutlet weak var campaignIDField: UITextField!
+    @IBOutlet weak var resultsTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,17 +29,16 @@ class ViewController: UIViewController {
                     saveAccessToken(accessToken)
                 }
             } catch {
-                print(error)
+                resultsTextView.text = error.localizedDescription
             }
         }
-
+        
         if let data = KeyChain.load(key: "AccessToken"),
             let result = String(data: data, encoding: String.Encoding.utf8){
-                print("result: " + result)
-                accesTokenTextField.text = result
+            accesTokenTextField.text = result
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -54,16 +55,45 @@ class ViewController: UIViewController {
             return
         }
         let status = KeyChain.save(key: "AccessToken", data: data)
-        print("status: ", status)
+        resultsTextView.text = String(describing: status)
     }
     
     @IBAction func getProfile(_ sender: Any) {
-        patreon.profile { (result) in
+        patreon.profile {
+            (result) in
             switch result {
             case .success(let profile):
-                print(profile)
+                self.resultsTextView.text = String(describing: profile)
             case .failure(let error):
-                fatalError("error: \(error.localizedDescription)")
+                self.resultsTextView.text = error.localizedDescription
+            }
+        }
+    }
+    
+    @IBAction func getCampaigns(_ sender: Any) {
+        patreon.campaigns {
+            (result) in
+            switch result {
+            case .success(let campaigns):
+                self.resultsTextView.text = String(describing: campaigns)
+            case .failure(let error):
+                self.resultsTextView.text = error.localizedDescription
+            }
+        }
+    }
+    
+    @IBAction func getCampaignPledges(_ sender: Any) {
+        guard let campaignID = campaignIDField.text, !campaignID.isEmpty
+            else {
+                return
+        }
+        patreon.pledges(campaignID: campaignID) {
+            (result) in
+            switch result {
+            case .success(let pledges):
+                self.resultsTextView.text = String(describing: pledges)
+            case .failure(let error):
+                self.resultsTextView.text = error.localizedDescription
             }
         }
     }

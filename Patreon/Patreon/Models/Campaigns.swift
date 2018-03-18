@@ -12,28 +12,29 @@ public struct Campaigns: Codable {
             let createdAt: String
             let creationCount: Int
             let creationName: String
-            let discordServerId: Int?
+            let discordServerId: String?
             let displayPatronGoals: Bool
             let earningsVisibility: String
-            let imageSmallUrl: String?
-            let imageUrl: String?
+            let imageSmallUrl: URL?
+            let imageUrl: URL?
+            let isChargeUpfront: Bool
             let isChargedImmediately: Bool
             let isMonthly: Bool
             let isNsfw: Bool
             let isPlural: Bool
             let mainVideoEmbed: String?
-            let mainVideoUrl: String?
+            let mainVideoUrl: URL?
             let oneLiner: String?
             let outstandingPaymentAmountCents: Int
             let patronCount: Int
             let payPerName: String?
             let pledgeSum: Int
-            let pledgeUrl: String
+            let pledgeUrl: URL
             let publishedAt: String
             let summary: String?
             let thanksEmbed: String?
             let thanksMsg: String?
-            let thanksVideoUrl: String?
+            let thanksVideoUrl: URL?
             private enum CodingKeys: String, CodingKey {
                 case createdAt = "created_at"
                 case creationCount = "creation_count"
@@ -43,6 +44,7 @@ public struct Campaigns: Codable {
                 case earningsVisibility = "earnings_visibility"
                 case imageSmallUrl = "image_small_url"
                 case imageUrl = "image_url"
+                case isChargeUpfront = "is_charge_upfront"
                 case isChargedImmediately = "is_charged_immediately"
                 case isMonthly = "is_monthly"
                 case isNsfw = "is_nsfw"
@@ -104,7 +106,7 @@ public struct Campaigns: Codable {
             let created: String?
             let discordId: String?
             let email: String?
-            let facebook: String?
+            let facebook: URL?
             let facebookId: String?
             let firstName: String?
             let fullName: String?
@@ -136,11 +138,19 @@ public struct Campaigns: Codable {
             let amountCents: Int?
             let createdAt: String?
             let description: String?
-            let id: String?
             let remaining: Int?
             let requiresShipping: Bool?
-            let type: String?
             let userLimit: Int?
+            let discordRoleIds: [Int]?
+            let editedAt: Date?
+            let patronCount: Int?
+            let postCount: Int?
+            let published: Bool?
+            let publishedAt: Date?
+            let title: String?
+            let unpublishedAt: Date?
+            let completedPercentage: Int?
+            let reachedAt: Date?
             private enum CodingKeys: String, CodingKey {
                 case about
                 case created
@@ -169,11 +179,19 @@ public struct Campaigns: Codable {
                 case amountCents = "amount_cents"
                 case createdAt = "created_at"
                 case description
-                case id
                 case remaining
                 case requiresShipping = "requires_shipping"
-                case type
                 case userLimit = "user_limit"
+                case discordRoleIds = "discord_role_ids"
+                case editedAt = "edited_at"
+                case patronCount = "patron_count"
+                case postCount = "post_count"
+                case published
+                case publishedAt = "published_at"
+                case title
+                case unpublishedAt = "unpublished_at"
+                case completedPercentage = "completed_percentage"
+                case reachedAt = "reached_at"
             }
         }
         let attributes: Attributes
@@ -190,21 +208,9 @@ public struct Campaigns: Codable {
                 }
                 let links: Links
             }
-            let campaign: Campaign?
-            struct Creator: Codable {
-                struct Data: Codable {
-                    let id: String
-                    let type: String
-                }
-                let data: Data
-                struct Links: Codable {
-                    let related: URL
-                }
-                let links: Links
-            }
-            let creator: Creator?
+            let campaign: Campaign
         }
-        let relationships: Relationships
+        let relationships: Relationships?
         let type: String
     }
     let included: [Included]

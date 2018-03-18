@@ -7,18 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF90DA08205C734F00713207 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF90DA07205C734F00713207 /* Keychain.swift */; };
-		AF90DA0F205C8EA600713207 /* Campaigns.json in Resources */ = {isa = PBXBuildFile; fileRef = AF90DA0E205C8EA600713207 /* Campaigns.json */; };
+		AF871BF8205F059D00247062 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF871BF7205F059D00247062 /* DateFormatter.swift */; };
 		AF90DA1B205D611F00713207 /* Pledges.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF90DA1A205D611F00713207 /* Pledges.swift */; };
-		AF90DA1D205D615B00713207 /* Pledges.json in Resources */ = {isa = PBXBuildFile; fileRef = AF90DA1C205D615B00713207 /* Pledges.json */; };
 		AF90DA1E205D6FC400713207 /* Campaigns.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF90DA18205D608E00713207 /* Campaigns.swift */; };
+		AF90DA43205ECE5400713207 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF90DA07205C734F00713207 /* Keychain.swift */; };
+		AF90DA58205EFBC500713207 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF90DA57205EFBC500713207 /* HTTPStatusCode.swift */; };
 		AFA54D0620501D2F0032BEA9 /* Patreon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA54CFC20501D2F0032BEA9 /* Patreon.framework */; };
 		AFA54D0B20501D2F0032BEA9 /* PatreonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA54D0A20501D2F0032BEA9 /* PatreonTests.swift */; };
 		AFA54D0D20501D2F0032BEA9 /* Patreon.h in Headers */ = {isa = PBXBuildFile; fileRef = AFA54CFF20501D2F0032BEA9 /* Patreon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AFA54D2020501D5D0032BEA9 /* Patreon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA54D1F20501D5D0032BEA9 /* Patreon.swift */; };
 		AFD76A72205B01B70012E547 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD76A71205B01B70012E547 /* Result.swift */; };
 		AFD76A8D205B149A0012E547 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD76A7F205B12880012E547 /* Profile.swift */; };
-		AFD76A8F205B161B0012E547 /* Profile.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD76A8E205B161B0012E547 /* Profile.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,11 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF871BF7205F059D00247062 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		AF90DA07205C734F00713207 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
-		AF90DA0E205C8EA600713207 /* Campaigns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Campaigns.json; path = Jsons/Campaigns.json; sourceTree = "<group>"; };
 		AF90DA18205D608E00713207 /* Campaigns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaigns.swift; sourceTree = "<group>"; };
 		AF90DA1A205D611F00713207 /* Pledges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pledges.swift; sourceTree = "<group>"; };
-		AF90DA1C205D615B00713207 /* Pledges.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Pledges.json; path = Jsons/Pledges.json; sourceTree = "<group>"; };
+		AF90DA57205EFBC500713207 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		AFA54CFC20501D2F0032BEA9 /* Patreon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Patreon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA54CFF20501D2F0032BEA9 /* Patreon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Patreon.h; sourceTree = "<group>"; };
 		AFA54D0020501D2F0032BEA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,7 +45,6 @@
 		AFA54D1F20501D5D0032BEA9 /* Patreon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patreon.swift; sourceTree = "<group>"; };
 		AFD76A71205B01B70012E547 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		AFD76A7F205B12880012E547 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		AFD76A8E205B161B0012E547 /* Profile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Profile.json; path = Jsons/Profile.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +66,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF90DA42205ECE2B00713207 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AF90DA07205C734F00713207 /* Keychain.swift */,
+				AFD76A71205B01B70012E547 /* Result.swift */,
+				AF90DA57205EFBC500713207 /* HTTPStatusCode.swift */,
+				AF871BF7205F059D00247062 /* DateFormatter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		AFA54CF220501D2F0032BEA9 = {
 			isa = PBXGroup;
 			children = (
@@ -89,10 +98,9 @@
 		AFA54CFE20501D2F0032BEA9 /* Patreon */ = {
 			isa = PBXGroup;
 			children = (
-				AFD76A73205B122A0012E547 /* Model */,
 				AFA54D1F20501D5D0032BEA9 /* Patreon.swift */,
-				AFD76A71205B01B70012E547 /* Result.swift */,
-				AF90DA07205C734F00713207 /* Keychain.swift */,
+				AFD76A73205B122A0012E547 /* Models */,
+				AF90DA42205ECE2B00713207 /* Helpers */,
 				AFA54CFF20501D2F0032BEA9 /* Patreon.h */,
 				AFA54D0020501D2F0032BEA9 /* Info.plist */,
 			);
@@ -108,17 +116,14 @@
 			path = PatreonTests;
 			sourceTree = "<group>";
 		};
-		AFD76A73205B122A0012E547 /* Model */ = {
+		AFD76A73205B122A0012E547 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AFD76A8E205B161B0012E547 /* Profile.json */,
-				AF90DA0E205C8EA600713207 /* Campaigns.json */,
-				AF90DA1C205D615B00713207 /* Pledges.json */,
 				AFD76A7F205B12880012E547 /* Profile.swift */,
 				AF90DA18205D608E00713207 /* Campaigns.swift */,
 				AF90DA1A205D611F00713207 /* Pledges.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +220,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFD76A8F205B161B0012E547 /* Profile.json in Resources */,
-				AF90DA0F205C8EA600713207 /* Campaigns.json in Resources */,
-				AF90DA1D205D615B00713207 /* Pledges.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,12 +237,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF871BF8205F059D00247062 /* DateFormatter.swift in Sources */,
 				AFD76A72205B01B70012E547 /* Result.swift in Sources */,
-				AF90DA08205C734F00713207 /* Keychain.swift in Sources */,
 				AF90DA1B205D611F00713207 /* Pledges.swift in Sources */,
 				AF90DA1E205D6FC400713207 /* Campaigns.swift in Sources */,
 				AFA54D2020501D5D0032BEA9 /* Patreon.swift in Sources */,
 				AFD76A8D205B149A0012E547 /* Profile.swift in Sources */,
+				AF90DA43205ECE5400713207 /* Keychain.swift in Sources */,
+				AF90DA58205EFBC500713207 /* HTTPStatusCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +392,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Patreon/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.Patreon;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -410,6 +415,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Patreon/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.Patreon;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

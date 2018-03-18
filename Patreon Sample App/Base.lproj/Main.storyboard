@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,45 +19,116 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yYf-LJ-aS0">
-                                <rect key="frame" x="121.5" y="288.5" width="132" height="90"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LJb-FT-sxu">
+                                <rect key="frame" x="8" y="28" width="359" height="688"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Access Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Anp-YX-7vA">
-                                        <rect key="frame" x="0.0" y="0.0" width="132" height="30"/>
-                                        <nil key="textColor"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="yYf-LJ-aS0">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="340"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LsK-kV-PZo">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="71"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Access Token" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Anp-YX-7vA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHX-em-4hO">
+                                                        <rect key="frame" x="0.0" y="38" width="359" height="33"/>
+                                                        <color key="backgroundColor" red="0.019607843137254902" green="0.1764705882352941" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <state key="normal" title="Save Access Token"/>
+                                                        <connections>
+                                                            <action selector="saveAccessToken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yi1-pC-3dJ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0K-R6-ah1" userLabel="Get profile">
+                                                <rect key="frame" x="0.0" y="114" width="359" height="33"/>
+                                                <color key="backgroundColor" red="0.97818166019999997" green="0.4044166803" blue="0.32995402810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="33" id="zXA-59-vJR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <state key="normal" title="Get profile"/>
+                                                <connections>
+                                                    <action selector="getProfile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JNa-DJ-3bB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCQ-6i-5UK">
+                                                <rect key="frame" x="0.0" y="190" width="359" height="33"/>
+                                                <color key="backgroundColor" red="0.97818166019999997" green="0.4044166803" blue="0.32995402810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="33" id="NJ4-Jq-lr3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <state key="normal" title="Get campaigns"/>
+                                                <connections>
+                                                    <action selector="getCampaigns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Gn-Rs-gPm"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LAf-Yg-25j">
+                                                <rect key="frame" x="0.0" y="266" width="359" height="74"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Campaign ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3d1-jT-lxe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="33"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="td7-AS-l6F">
+                                                        <rect key="frame" x="0.0" y="41" width="359" height="33"/>
+                                                        <color key="backgroundColor" red="0.97818166019999997" green="0.4044166803" blue="0.32995402810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" id="txV-cC-GlS"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <state key="normal" title="Get campaign pledges"/>
+                                                        <connections>
+                                                            <action selector="getCampaignPledges:" destination="BYZ-38-t0r" eventType="touchUpInside" id="75u-DV-YIf"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.97818166019999997" green="0.4044166803" blue="0.32995402810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="e0K-R6-ah1" firstAttribute="top" secondItem="yYf-LJ-aS0" secondAttribute="top" constant="114" id="w50-zO-UPD"/>
+                                        </constraints>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a2v-yk-NCI">
+                                        <rect key="frame" x="0.0" y="348" width="359" height="340"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHX-em-4hO">
-                                        <rect key="frame" x="0.0" y="30" width="132" height="30"/>
-                                        <state key="normal" title="Save Access Token"/>
-                                        <connections>
-                                            <action selector="saveAccessToken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yi1-pC-3dJ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0K-R6-ah1" userLabel="Get profile">
-                                        <rect key="frame" x="0.0" y="60" width="132" height="30"/>
-                                        <state key="normal" title="Get profile"/>
-                                        <connections>
-                                            <action selector="getProfile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JNa-DJ-3bB"/>
-                                        </connections>
-                                    </button>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.95272082090377808" green="0.95686525106430054" blue="0.96087664365768433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="yYf-LJ-aS0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WTe-bu-yEO"/>
-                            <constraint firstItem="yYf-LJ-aS0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zXy-iM-cNf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LJb-FT-sxu" secondAttribute="trailing" constant="8" id="3X8-bc-9uF"/>
+                            <constraint firstItem="LJb-FT-sxu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="5Ns-Uv-54R"/>
+                            <constraint firstItem="LJb-FT-sxu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Bi8-hk-5vr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LJb-FT-sxu" secondAttribute="trailing" constant="8" id="OQM-dp-hyb"/>
+                            <constraint firstItem="LJb-FT-sxu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="awG-0K-KRk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LJb-FT-sxu" secondAttribute="bottom" constant="8" id="de0-xt-zOc"/>
+                            <constraint firstItem="LJb-FT-sxu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="djt-DO-OJe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LJb-FT-sxu" secondAttribute="bottom" constant="8" id="ehg-4K-7q3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="accesTokenTextField" destination="Anp-YX-7vA" id="V1m-hi-Ns1"/>
+                        <outlet property="campaignIDField" destination="3d1-jT-lxe" id="EpS-rl-pC5"/>
+                        <outlet property="resultsTextView" destination="a2v-yk-NCI" id="P58-V1-HZJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

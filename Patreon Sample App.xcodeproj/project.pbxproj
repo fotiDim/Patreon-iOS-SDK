@@ -14,26 +14,33 @@
 		AFA54CB120501C840032BEA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA54CAF20501C840032BEA9 /* Main.storyboard */; };
 		AFA54CB320501C840032BEA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA54CB220501C840032BEA9 /* Assets.xcassets */; };
 		AFA54CB620501C840032BEA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA54CB420501C840032BEA9 /* LaunchScreen.storyboard */; };
-		AFE88D8F2052625E0050304D /* Patreon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE88D8C205262320050304D /* Patreon.framework */; };
-		AFE88D902052625E0050304D /* Patreon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFE88D8C205262320050304D /* Patreon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AFF66E2C205F00BF00E5D255 /* Patreon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF90DA53205ED5BE00713207 /* Patreon.framework */; };
+		AFF66E2D205F00BF00E5D255 /* Patreon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF90DA53205ED5BE00713207 /* Patreon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AFE88D8B205262320050304D /* PBXContainerItemProxy */ = {
+		AF90DA52205ED5BE00713207 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AFE88D86205262320050304D /* Patreon.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = AFA54CFC20501D2F0032BEA9;
 			remoteInfo = Patreon;
 		};
-		AFE88D8D205262320050304D /* PBXContainerItemProxy */ = {
+		AF90DA54205ED5BE00713207 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AFE88D86205262320050304D /* Patreon.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = AFA54D0520501D2F0032BEA9;
 			remoteInfo = PatreonTests;
 		};
-		AFE88D912052625E0050304D /* PBXContainerItemProxy */ = {
+		AFF66E28205F00B500E5D255 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFE88D86205262320050304D /* Patreon.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AFA54CFB20501D2F0032BEA9;
+			remoteInfo = Patreon;
+		};
+		AFF66E2E205F00BF00E5D255 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AFE88D86205262320050304D /* Patreon.xcodeproj */;
 			proxyType = 1;
@@ -49,7 +56,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AFE88D902052625E0050304D /* Patreon.framework in Embed Frameworks */,
+				AFF66E2D205F00BF00E5D255 /* Patreon.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,7 +73,7 @@
 		AFA54CB220501C840032BEA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFA54CB520501C840032BEA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFA54CB720501C840032BEA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFE88D86205262320050304D /* Patreon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Patreon.xcodeproj; path = Patreon/Patreon.xcodeproj; sourceTree = "<group>"; };
+		AFE88D86205262320050304D /* Patreon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Patreon.xcodeproj; path = ../Patreon/Patreon.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,19 +81,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFE88D8F2052625E0050304D /* Patreon.framework in Frameworks */,
+				AFF66E2C205F00BF00E5D255 /* Patreon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF90DA44205ECE7800713207 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFE88D86205262320050304D /* Patreon.xcodeproj */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF90DA4E205ED5BE00713207 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF90DA53205ED5BE00713207 /* Patreon.framework */,
+				AF90DA55205ED5BE00713207 /* PatreonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF90DA56205ED8DF00713207 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		AFA54C9F20501C840032BEA9 = {
 			isa = PBXGroup;
 			children = (
-				AF90DA16205D2D8C00713207 /* Configuration.plist */,
-				AFE88D86205262320050304D /* Patreon.xcodeproj */,
 				AFA54CAA20501C840032BEA9 /* Patreon Sample App */,
+				AF90DA44205ECE7800713207 /* Frameworks */,
 				AFA54CA920501C840032BEA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,18 +138,11 @@
 				AFA54CAF20501C840032BEA9 /* Main.storyboard */,
 				AFA54CB220501C840032BEA9 /* Assets.xcassets */,
 				AFA54CB420501C840032BEA9 /* LaunchScreen.storyboard */,
+				AF90DA56205ED8DF00713207 /* Helpers */,
 				AFA54CB720501C840032BEA9 /* Info.plist */,
+				AF90DA16205D2D8C00713207 /* Configuration.plist */,
 			);
 			path = "Patreon Sample App";
-			sourceTree = "<group>";
-		};
-		AFE88D87205262320050304D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AFE88D8C205262320050304D /* Patreon.framework */,
-				AFE88D8E205262320050304D /* PatreonTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +160,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				AFE88D922052625E0050304D /* PBXTargetDependency */,
+				AFF66E29205F00B500E5D255 /* PBXTargetDependency */,
+				AFF66E2F205F00BF00E5D255 /* PBXTargetDependency */,
 			);
 			name = "Patreon Sample App";
 			productName = "Patreon Sample App";
@@ -176,7 +200,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = AFE88D87205262320050304D /* Products */;
+					ProductGroup = AF90DA4E205ED5BE00713207 /* Products */;
 					ProjectRef = AFE88D86205262320050304D /* Patreon.xcodeproj */;
 				},
 			);
@@ -188,18 +212,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		AFE88D8C205262320050304D /* Patreon.framework */ = {
+		AF90DA53205ED5BE00713207 /* Patreon.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Patreon.framework;
-			remoteRef = AFE88D8B205262320050304D /* PBXContainerItemProxy */;
+			remoteRef = AF90DA52205ED5BE00713207 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		AFE88D8E205262320050304D /* PatreonTests.xctest */ = {
+		AF90DA55205ED5BE00713207 /* PatreonTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = PatreonTests.xctest;
-			remoteRef = AFE88D8D205262320050304D /* PBXContainerItemProxy */;
+			remoteRef = AF90DA54205ED5BE00713207 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -232,10 +256,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AFE88D922052625E0050304D /* PBXTargetDependency */ = {
+		AFF66E29205F00B500E5D255 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Patreon;
-			targetProxy = AFE88D912052625E0050304D /* PBXContainerItemProxy */;
+			targetProxy = AFF66E28205F00B500E5D255 /* PBXContainerItemProxy */;
+		};
+		AFF66E2F205F00BF00E5D255 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Patreon;
+			targetProxy = AFF66E2E205F00BF00E5D255 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -378,7 +407,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fotidim.Patreon-Sample-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -394,7 +423,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fotidim.Patreon-Sample-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
