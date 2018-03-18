@@ -1,4 +1,4 @@
-# Patreon-iOS-SDK
+# Patreon iOS SDK
 [![iOS 8+](https://img.shields.io/badge/platform-iOS%209%2B-blue.svg)](https://img.shields.io/badge/platform-iOS%209%2B-blue.svg)
 [![Swift 4](https://img.shields.io/badge/language-swift4-f48041.svg)](https://img.shields.io/badge/language-swift4-f48041.svg)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://img.shields.io/badge/license-MIT-lightgrey.svg)
