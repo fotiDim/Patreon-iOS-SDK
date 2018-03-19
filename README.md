@@ -35,7 +35,7 @@ Initialize a Patreon object:
 
 Fetch the user's profile:
 
-```
+```swift
 patreon.profile {
     (result) in
     switch result {
@@ -49,7 +49,7 @@ patreon.profile {
 
 Fetch the user's campaigns:
 
-```
+```swift
 patreon.campaigns {
     (result) in
     switch result {
@@ -63,7 +63,7 @@ patreon.campaigns {
 
 Fetch the campaign's pledges:
 
-```
+```swift
 patreon.pledges(campaignID: campaignID) {
     (result) in
     switch result {
