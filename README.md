@@ -13,7 +13,7 @@ The SDK is light and self contained without requiring any external dependencies.
 
 ## Sample app
 
-![Patreon-iOS-SDK](https://github.com/fotiDim/Patreon-iOS-SDK/raw/master/Screenshots/Patreon-iOS-SDK.png)
+![Patreon-iOS-SDK](https://github.com/fotiDim/Patreon-iOS-SDK/raw/master/Screenshots/Patreon-iOS-SDK.png | width=300)
 
 
 Using the included sample app you can:
