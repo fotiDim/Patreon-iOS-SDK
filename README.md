@@ -11,6 +11,18 @@ The project is written in Swift 4 and makes use of *Codable* for seamless JSON p
 
 The SDK is light and self contained without requiring any external dependencies.
 
+## Sample app
+
+![Patreon-iOS-SDK](https://github.com/fotiDim/Patreon-iOS-SDK/raw/master/Screenshots/Patreon-iOS-SDK.png)
+
+
+Using the included sample app you can:
+* Paste a valid Access Token and use the blue button to save it to the keychain.
+* After having the Access Token in the keychain you can use the red buttons to fetch resources.
+* For getting pledges you need to fill in a valid campaign ID first which you can find using the *Get campaigns* button.
+
+Each method offers several overloads (e.g. allowing to provide an access token as an argument). For each of the API resources above there is a separate model struct which maps fields from the API one-on-one.
+
 ## Authentication
 So far the SDK does not handle authentication. You are responsible of authenticating the user and obtaining the Access Token. There are 2 strategies for that:
 * Use the **Creator's Access Token**. Make sure you don't bundle it with the app as this is a security risk. The best way it to use on-demand resources to download it after installing the app and then directly write it to the keychain. The SDK will automatically check in the keychain for the key named "AccessToken" before making each request and use it if it's there.
@@ -74,9 +86,6 @@ patreon.pledges(campaignID: campaignID) {
     }
 }
 ```
-
-Each method offers several overloads (e.g. allowing to provide an access token as an argument). For each of the API resources above there is a separate model struct which maps fields from the API one-on-one.
-
 
 ## Version History
 - Version 0.1 (18/3/18)
