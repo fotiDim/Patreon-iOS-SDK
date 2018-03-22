@@ -10,10 +10,9 @@ import UIKit
 
 var urlComponents = URLComponents()
 
-public class Patreon: NSObject {
+public class Patreon {
     
-    public override init() {
-        super.init()
+    public init() {
         urlComponents.scheme = "https"
         urlComponents.host = "www.patreon.com"
     }
